@@ -6,4 +6,4 @@ Solved problems | Years | Round
 --------------- | ----- | -----
 Problem A. Saving the Universe | 2008 | Qualification Round
 
--[X] Day1
+- [X] Day1
