@@ -1,2 +1,2 @@
 # codejam
-This is my practices on codejam
+This is our practices on codejam
