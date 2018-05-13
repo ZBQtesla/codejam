@@ -26,7 +26,7 @@ public class TrainTimetabel {
             int Aneed = 0; // the number of trains that A station needs
             int Bneed = 0; // the number of trains that B station needs
             int Ahave = 0; // the number of trains that A station has
-            int Bhave = 0; // the number of trains that A station has
+            int Bhave = 0; // the number of trains that B station has
 
             T = Integer.parseInt(in.nextLine()); // get T
 
@@ -43,7 +43,7 @@ public class TrainTimetabel {
             // get the time departure from A and arrival at B
             for (int i = 0; i < NA; i++) {
                 String str = in.nextLine();
-                Pattern p = Pattern.compile("(?<dhour>[0-9]+):(?<dmin>[0-9]+) (?<ahour>[0-9]+):(?<amin>[0-9]+)");
+                Pattern p = Pattern.compile("(?<dhour>\\d+):(?<dmin>\\d+) (?<ahour>\\d+):(?<amin>\\d+)");
                 Matcher m = p.matcher(str);
                 m.find();
                 int dhour = Integer.parseInt(m.group("dhour"));
@@ -76,6 +76,9 @@ public class TrainTimetabel {
                     if (a.key.equals("Ba") || a.key.equals("Aa")) {
                         return -1;
                     }
+                    if (b.key.equals("Ba") || b.key.equals("Aa")) {
+                        return 1;
+                    }
                 }
 
                 return a.minutes - b.minutes;
@@ -85,15 +88,18 @@ public class TrainTimetabel {
             for (Time t : time) {
                 if (t.key.equals("Aa")) {
                     Ahave++;
-                } else if (t.key.equals("Ba")) {
+                } 
+                else if (t.key.equals("Ba")) {
                     Bhave++;
-                } else if (t.key.equals("Ad")) {
+                } 
+                else if (t.key.equals("Ad")) {
                     if (Ahave == 0) {
                         Aneed++;
                         Ahave++;
                     }
                     Ahave--;
-                } else if (t.key.equals("Bd")) {
+                } 
+                else if (t.key.equals("Bd")) {
                     if (Bhave == 0) {
                         Bneed++;
                         Bhave++;
@@ -126,9 +132,6 @@ class Time {
      */
     String key; // Used to mark this time
 
-    /**
-     * 
-     */
     public Time(int hour, int min, String key) {
         this.hour = hour;
         this.min = min;
