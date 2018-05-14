@@ -7,4 +7,4 @@ Tried problems | Years | Round | Date | Result
 Problem A. Saving the Universe | 2008 | Qualification Round | 2018/5/11 | Passed
 Proble B. Train Timetable | 2008 | Qualification Round | 2018/5/12 | Passed
 Proble C. Fly Swatter | 2008 | Qualification Round | 2018/5/13 | Failed
-Proble A. Minimum Scalar Product | Round 1A | 2018/5/14 | Passed
+Proble A. Minimum Scalar Product | 2008 | Round 1A | 2018/5/14 | Passed
