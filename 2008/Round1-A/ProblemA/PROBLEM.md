@@ -16,7 +16,7 @@ Case #X: Y
 
 where X is the test case number, starting from 1, and Y is the minimum scalar product of all permutations of the two given vectors.
 
-###Limits
+### Limits
 **Small dataset**
 
 T = 1000
