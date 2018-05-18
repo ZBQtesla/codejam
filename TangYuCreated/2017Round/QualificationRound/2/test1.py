@@ -1,2 +1,2 @@
 import tidy_numbers
-print(tidy_numbers.biggesttidyHelp("49852983475"))
+print(tidy_numbers.biggesttidy("500"))

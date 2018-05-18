@@ -16,8 +16,6 @@ def main():
     outfile.close()
 
 
-
-
 def getinput(infile,listofinteger):
     '''type (infile):file
         listofstring:list[str]
@@ -57,7 +55,7 @@ def biggesttidy(integer):
     else:   #we can construct a tidy integer of the same exact length
         for i in range(length):
             if not isatidystart(string[i:],string[i]):
-                 result += str(int(string[i]) - 1) + '9' * (leng - 1)
+                 result += (str(int(string[i]) - 1) + '9' * (leng - 1))
                  break
             else:
                 result += string[i]
@@ -66,19 +64,8 @@ def biggesttidy(integer):
 
 def isatidystart(string,charint):
     length = len(string)
-    return length * charint <= string
+    return True if int(length * charint) <= int(string) else False
             
-def istidy(integer):
-    if integer in range(0,10):
-        return True
-    string = str(integer)
-    length = len(string)
-
-    for i in range(length - 1):
-        if string[i] > string[i + 1]:
-            return False
-
-    return True
 
 main()
 
