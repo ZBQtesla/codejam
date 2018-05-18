@@ -1,2 +1,2 @@
 import tidy_numbers
-print(tidy_numbers.biggesttidy("500"))
+print(tidy_numbers.isatidystart("594222222222","5"))

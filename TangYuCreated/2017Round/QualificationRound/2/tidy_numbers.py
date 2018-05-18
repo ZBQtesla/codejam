@@ -26,7 +26,6 @@ def getinput(infile,listofinteger):
     for i in range(numofcases):
         listofinteger.append(int(infile.readline().strip()))
 
-    return numofcases
 
 def printresult(listoftidynum,outfile):
     '''type listoftidynum:list[integer]
@@ -64,7 +63,7 @@ def biggesttidy(integer):
 
 def isatidystart(string,charint):
     length = len(string)
-    return True if int(length * charint) <= int(string) else False
+    return  int(length * charint) <= int(string) 
             
 
 main()
