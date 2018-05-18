@@ -29,8 +29,8 @@ def numofflip(string,num):
         string = auxstring
 
 def solve():
-    infile = open(r"D:\Github\codejam\TangYuCreated\2017Round\QualificationRound\A-large-practice.in","r")
-    outfile = open(r"D:\Github\codejam\TangYuCreated\2017Round\QualificationRound\A-large-practice_out.txt","w")
+    infile = open("A-large-practice.in","r")
+    outfile = open("A-large-practice_out.txt","w")
     numofcases = int(infile.readline().strip())
     listofcases = []
     for i in range(numofcases):
