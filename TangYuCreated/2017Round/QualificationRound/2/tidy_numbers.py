@@ -1,6 +1,6 @@
 def main():
-    infile = open("B-small-practice.in","r")
-    outfile = open("B_small_output.txt","w")
+    infile = open("B-large-practice.in","r")
+    outfile = open("B_large_output.txt","w")
     listofinteger = []  #used to store the integers,[int]
     getinput(infile,listofinteger)
 
