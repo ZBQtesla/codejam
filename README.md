@@ -1,6 +1,6 @@
 # codejam
 This is our practices on [codejam](https://code.google.com/codejam/)
-> For *Tang Yu* and *Baiqiang Zhang*
+> For *Tang Yu*, *Baiqiang Zhang*, *Song Chao*, *Song Yue*, *Guan Yue*
 
 Tried problems | Years | Round | Date | Result
 -------------- | ----- | ----- | ---- | ------
