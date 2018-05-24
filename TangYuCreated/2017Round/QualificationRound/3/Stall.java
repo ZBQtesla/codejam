@@ -28,8 +28,8 @@ public class Stall {
     /*
      * The numbers of floor.
      */
-    static int numOfFloor(long n) {
-        int num = 0;
+    static long numOfFloor(long n) {
+        long num = 0;
         while (n != 1) {
             n = n >> 1;
             num++;
@@ -43,16 +43,15 @@ public class Stall {
         for (int i = 1; i <= T; i++) {
             long N = in.nextLong();
             long K = in.nextLong();
-
-            int floor = numOfFloor(K);
-            long indexOfFloor = (K + 1 - (1 << floor));
+            
+            // floor should be long
+            long floor = numOfFloor(K);
+            long tmp = 1;
+            long indexOfFloor = (K + 1 - (tmp << floor));
 
             long min = 0;
             long max = 0;
 
-            // <size, num>
-            //            Map<Long, Integer> currFloor = new HashMap<>();
-            //            Map<Long, Integer> 
 
             Segment currMin = new Segment(0, 0);
             Segment currMax = new Segment(N, 1);
