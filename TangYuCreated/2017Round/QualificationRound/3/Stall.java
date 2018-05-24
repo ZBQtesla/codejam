@@ -46,6 +46,8 @@ public class Stall {
             
             // floor should be long
             long floor = numOfFloor(K);
+            
+            // Wow! Wow! Wow! Evil java! 
             long tmp = 1;
             long indexOfFloor = (K + 1 - (tmp << floor));
 
