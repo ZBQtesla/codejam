@@ -80,7 +80,6 @@ def evictSomeone(currentCache,log,target):
 
     '''
     farthestUsed = -1
-    toBeReplaced = -1
     for i in range(len(currentCache)):
         try:
             if log.index(currentCache[i]) > farthestUsed:
