@@ -1,0 +1,17 @@
+Case #1: 64
+Case #2: 5
+Case #3: 5
+Case #4: 5
+Case #5: 1
+Case #6: 1
+Case #7: 1
+Case #8: 1
+Case #9: 1
+Case #10: 564864
+Case #11: 65
+Case #12: 56
+Case #13: 1684
+Case #14: 4564
+Case #15: 5465
+Case #16: 4789
+Case #17: 3241
