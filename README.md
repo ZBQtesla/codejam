@@ -9,4 +9,6 @@ Proble B. Train Timetable | 2008 | Qualification Round | 2018/5/12 | Passed
 Proble C. Fly Swatter | 2008 | Qualification Round | 2018/5/13 | Failed
 Proble A. Minimum Scalar Product | 2008 | Round 1A | 2018/5/14 | Passed
 Proble B. Milkshakes | 2008 | Round 1A | 2018/5/15 | Passed & Time out
-Proble c. Numbers | 2008 | Round 1A | 2018/5/15 | Failed & Too difficult
+Proble C. Numbers | 2008 | Round 1A | 2018/5/15 | Failed & Too difficult
+Proble A. GBus count | 2018 | Kickstart Practice | 2018/6/9 | Passed
+Proble B. Googol String | 2018 | Kickstart Practice | 2018/6/10 | Passed
