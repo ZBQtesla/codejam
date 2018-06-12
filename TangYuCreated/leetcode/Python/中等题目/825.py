@@ -4,14 +4,21 @@ class Solution:
         :type ages: List[int]
         :rtype: int
         """
-        cnt = [0] * 121
+        counts = 121 * [0]
         for age in ages:
-            cnt[age] += 1
+            counts[age] += 1
         
-        ans = 0
-        for i in range(15, 121):
-            if cnt[i] == 0: continue
-            for j in range(int(i*0.5+7)+1, i):
-                ans += cnt[i] * cnt[j]
-            ans += (cnt[i])*(cnt[i]-1)
-        return ans
+        leftEdge = 68
+        total = sum(counts[leftEdge:])
+        count = 0
+        for age in range(120,14,-1):     #when kids are younger than 15 years old,they cannot send a card
+            newLeftEdge = int(age * 0.5) + 8
+            if newLeftEdge != leftEdge:
+                total += counts[newLeftEdge]
+            leftEdge = newLeftEdge
+            
+            if counts[age]:
+                num = counts[age]
+                count += num * (num - 1) + num * (total - num)
+                total -= counts[age]
+        return count
