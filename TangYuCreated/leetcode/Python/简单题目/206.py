@@ -10,14 +10,13 @@ class Solution:
         :type head: ListNode
         :rtype: ListNode
         """
-        List = []
-        if not head:
-            return []
-        while head.next != None:
-            List.append(head)
-            head = head.next
-        List.append(head)
-        for i in range(len(List) - 1,0,-1):
-            List[i].next = List[i - 1]
-        List[0].next = None
-        return List[-1]
+        self.result = None
+        def helper(fatherNode,node):
+            if node:
+                nextNode = node.next
+                node.next = fatherNode
+                helper(node,nextNode)
+            else:
+                self.result = fatherNode
+        helper(None,head)
+        return self.result
