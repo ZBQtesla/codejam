@@ -12,7 +12,8 @@ double mergeSortMedian(int* nums1, int nums1Size, int* nums2, int nums2Size)
 {
     int p1 = 0, p2 = 0;
     int count = 0;
-    int nums[nums1Size + nums2Size];
+    int numsSize = nums1Size + nums2Size;
+    int nums[numsSize];
     while(p1 < nums1Size && p2 < nums2Size)
     {
         int min = 0;
@@ -34,7 +35,7 @@ double mergeSortMedian(int* nums1, int nums1Size, int* nums2, int nums2Size)
     {
         nums[count++] = nums2[p2++];
     }
-    return getMedian(nums, nums1Size + nums2Size);
+    return getMedian(nums, numsSize);
 }
 
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size) 
@@ -47,14 +48,15 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
     {
         if(m > 2)
         {
-            nums1 = nums1 + ((m - 3) / 2) * sizeof(int);
+            nums1 = nums1 + (m - 3) / 2;
             m = (m + 4) / 2 - (m - 3) / 2;
         }
         if(n > 2)
         {
-            nums2 = nums2 + ((n - 3) / 2) * sizeof(int);
+            nums2 = nums2 + (n - 3) / 2;
             n = (n + 4) / 2 - (n - 3) / 2;
         }
+        // printf("mergeSortMedian(nums1, %d, nums2[0] = %d, %d)\n", m, nums2[0], n);
         return mergeSortMedian(nums1, m, nums2, n);
     }
 
@@ -68,15 +70,14 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
     // Divide
     int minSize = m < n ? (m - 1) / 2 : (n - 1) / 2;
     return median1 < median2 
-        ? findMedianSortedArrays((nums1 + minSize * sizeof(int)), m - minSize, nums2, n - minSize)
-        : findMedianSortedArrays(nums1, m - minSize, (nums2 + minSize * sizeof(int)), n - minSize);
+        ? findMedianSortedArrays(nums1 + minSize, m - minSize, nums2, n - minSize)
+        : findMedianSortedArrays(nums1, m - minSize, (nums2 + minSize), n - minSize);
 }
 
-
-int main(int argc, char const *argv[])
-{
-    int nums1[0] = {};
-    int nums2[5] = {1, 2, 3, 4, 5};
-    printf("%f\n", findMedianSortedArrays(nums1, 0, nums2, 5));
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     int nums1[0] = {};
+//     int nums2[5] = {1, 2, 3, 4, 5};
+//     printf("%f\n", findMedianSortedArrays(nums1, 0, nums2, 5));
+//     return 0;
+// }
